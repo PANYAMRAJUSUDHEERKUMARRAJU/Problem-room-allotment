@@ -124,7 +124,7 @@ int main(){
         
     int ch;
     do{
-        cout<<"\nEnter Your Choise: ";
+        cout<<"\nEnter Your Choice: ";
         cin>>ch;
         
         switch(ch){
