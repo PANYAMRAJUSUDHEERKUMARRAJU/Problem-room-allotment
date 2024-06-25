@@ -41,7 +41,7 @@ bool isValid(string s)
             }
             
             string Area;
-            cout<<"In which Area do you want to book your room: ";
+            cout<<"In which Area do you want to book your room:";
             cin>>Area;
             cout<<"\n\t\t\tcongratulations!!...Your room has Booked\t\t\t\n";
             cout<<endl;
@@ -49,7 +49,7 @@ bool isValid(string s)
         void setHost(){
             cout<<"\n\t\t\t*******Set the host*******\t\t\t\n";
             char Name[50];
-            cout<<"Host's Name To Manage the room: ";
+            cout<<"Host's Name To Manage the room:";
             cin.ignore();
             cin.getline(Name,50);
             cout<<endl;
@@ -58,13 +58,13 @@ bool isValid(string s)
         void startTime(){
             cout<<"\n\t\t\t*******Set the start time*******\t\t\t\n";
             char Time[50];
-            cout<<"Set the start time to start the work: ";
+            cout<<"Set the start time to start the work:";
             cin.ignore();
             cin.getline(Time,50);
             cout<<"At "<<Time<<" Everyone should start their work\n";
             
             char Time1[50];
-            cout<<"Lunch break: ";
+            cout<<"Lunch break:";
             cin.ignore();
             cin.getline(Time1,50);
             cout<<"At "<<Time1<<" you Can Lunch in Lunch Area\n";
@@ -74,7 +74,7 @@ bool isValid(string s)
         void endTime(){
             cout<<"\n\t\t\t*******Set the end time*******\t\t\t\n";
             char Time[50];
-            cout<<"Set the end time to stop the work: ";
+            cout<<"Set the end time to stop the work:";
             cin.ignore();
             cin.getline(Time,50);
             cout<<"At "<<Time<<" Relax!!";
@@ -84,7 +84,7 @@ bool isValid(string s)
         void capability(){
             cout<<"\n\t\t\t*******Set the chair booking capability*******\t\t\t\n";
             int n1,n2,n3;
-            cout<<"Enter chair capability in Workspace Area: ";
+            cout<<"Enter chair capability in Workspace Area:";
             cin>>n1;
             cout<<"There are total "<<n1<<" employees so,Everyone should be comforatable in Workspace Area\n";
             cout<<"Enter chair capability in Meeting Area: ";
