@@ -1,3 +1,148 @@
+#include <conio.h>
+#include <cstdio>
+#include <iostream>
+#include <string.h>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+
+static int q = 0;    
+
+class reservation
+{
+    // all features want in the problem
+    char room_number[5], host[5], start[5], send[5], from[5], to[5], chair[10][4][10];  // 10 rows 4 columns & 10 rooms
+
+public:
+// let's define all functions
+    void booking();
+    void allotment();
+    void empty();
+    void display();
+    void avail();
+    void position(int t);
+} 
+
+hotel[10];  // maximum 10 rooms possible
+
+// to create a line of same character to distinguish the show data 
+void design(char todraw)
+{
+    for (int i = 0; i < 402; i++)
+        cout << todraw;
+}
+
+// here installation done using scope resolution
+void reservation::booking()
+{
+    // take every required detail of room & host
+    cout << "Please enter room number : ";
+    cin >> hotel[q].room_number;
+    cout << endl
+         << "Please enter Customer's name : ";
+    cin >> hotel[q].host;
+    cout << endl
+         << "Enter start time :";
+    cin >> hotel[q].start;
+    cout << endl
+         << "Enter Session end time :";
+    cin >> hotel[q].send;
+    cout << endl
+         << "From : ";
+    cin >> hotel[q].from;
+    cout << endl
+         << "To : ";
+    cin >> hotel[q].to;
+    hotel[q].empty();
+    q++;
+}
+
+// here allotmention done
+void reservation::allotment()
+{
+    int chair;
+    char num[5];
+
+top:
+// enter room no if installed then look for chair otherwise enter a valid room no.
+    cout << "Room no. :";
+    cin >> num;
+    int n;
+
+    for (n = 0; n <= q; n++)
+    {
+        // room is taken by anyone but installed already
+        if (strcmp(hotel[n].room_number, num) == 0)
+            break;
+    }
+
+    while (n <= q)
+    {
+        cout << endl
+             << "Chair number :";
+        cin >> chair;
+
+        // if chair number is greater than maximum capicity that is 10*4 => 40
+        if (chair > 40)
+            cout << endl
+                 << "Only 40 chairs are available int the room !";
+        else
+        {
+            // if required chair is empty then take traveller's data
+            if (strcmp(hotel[n].chair[chair / 4][(chair % 4) - 1], "Empty") == 0)
+            {
+                cout << "Enter traveller's name: ";
+                cin >> hotel[n].chair[chair / 4][(chair % 4) - 1];
+                break;   // once chair is reserved then come out of the process of allotment
+            }
+            // if required chair is not empty then look for another one
+            else
+                cout << "The chair no. is already reserved " << endl;
+        }
+    }
+    // if entered room no is not installed yet
+    if (n > q)
+    {
+        cout << "Enter correct room no" << endl;
+        goto top;   // go to top & enter a valid room no which is installed
+    }
+}
+
+// show empty in the place of empty chairs
+void reservation::empty()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            strcpy(hotel[q].chair[i][j], "Empty");
+        }
+    }
+}
+
+// show the complete view of room
+void reservation::display()
+{
+    int a;
+    char num[5];
+    // take the room no input of which chairs view is showing
+    cout << "Enter room no :";
+    cin >> num;
+    
+    for (a = 0; a <= q; a++)
+    {
+        // room is taken by anyone but installed already
+        if (strcmp(hotel[a].room_number, num) == 0)
+            break;
+    }
+
+    while (a <= q)
+    {
+    // create a line of * to distinguish show data
+        design('#');
+    // show the room installing informations
+        cout << "Room number \t" << hotel[a].room_number << "\nHost: \t" << hotel[a].host << "\t\tStart time: \t"
+             << hotel[a].start << "\t End time:" << hotel[a].send << "\nFrom: \t\t" << hotel[a].from << "\t\tTo: \t\t" << hotel[a].to << "\n";
     // show line to distinguish again
         design('#');
 
