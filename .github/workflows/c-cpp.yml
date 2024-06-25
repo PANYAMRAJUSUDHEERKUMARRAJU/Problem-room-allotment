@@ -19,24 +19,24 @@ bool isValid(string s)
         void Book(){
             cout<<"\n\t\t\t*******Book a Room*******\t\t\t\n";
             char Name[50];
-            cout<<"Enter the customer's Name: ";
+            cout<<"Enter the customer's Name:";
             cin.ignore();
             cin.getline(Name,50);
             
             char Address[50];
-            cout<<"Enter the customer's Address: ";
+            cout<<"Enter the customer's Address:";
             cin.ignore();
             cin.getline(Address,50);
             
             string phone;
-            cout<<"Enter the customer's Mobile No.: ";
+            cout<<"Enter the customer's Mobile No.:";
             cin>>phone;
             
             if(isValid(phone)){
                cout << "Your Mobile No. is Varified..\n";
             }else{
                 cout<<"Invalid Mobile No. Please Enter valid Mobile No.\n";
-                cout<<"Enter the customer's Mobile No.: ";
+                cout<<"Enter the customer's Mobile No.:";
                 cin>>phone;
             }
             
