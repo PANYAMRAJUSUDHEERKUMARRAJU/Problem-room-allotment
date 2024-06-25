@@ -87,10 +87,10 @@ bool isValid(string s)
             cout<<"Enter chair capability in Workspace Area:";
             cin>>n1;
             cout<<"There are total "<<n1<<" employees so,Everyone should be comforatable in Workspace Area\n";
-            cout<<"Enter chair capability in Meeting Area: ";
+            cout<<"Enter chair capability in Meeting Area:";
             cin>>n2;
             cout<<n2<<" Number of people can meet in Meeting Area\n";
-            cout<<"Enter chair capability in Lab Area: ";
+            cout<<"Enter chair capability in Lab Area:";
             cin>>n3;
             cout<<n3<<" employees perform experiment in Lab Area\n";
             cout<<endl;
@@ -99,20 +99,20 @@ bool isValid(string s)
         void roomNo(){
             cout<<"\n\t\t\t*******Define the room number*******\t\t\t\n";
             cout<<"According to Your All requirement\n";
-            cout<<"Room is divided in two Compartment: \n";
+            cout<<"Room is divided in two Compartment:\n";
             cout<<"\n\t\t\t---------------FIRST COMPARTMENT---------------\t\t\t\n";
             cout<<"As you Enter in room There is stuff Area in Room No.101\n";
             cout<<"There is Kitchen Area after the stuff and Room No. of Kitchen is 102\n";
             cout<<"There is coffee Room after Kitchen Room and Room No. of coffee Area is 103\n";
             cout<<"At back side There is small lean Area\n";
             cout<<"So finally..\n";
-            cout<<"Room No. of stuff Area: 101\n";
-            cout<<"Room No. of Kitchen Area: 102\n";
-            cout<<"Room No. of coffee Area: 103\n";
+            cout<<"Room No. of stuff Area:101\n";
+            cout<<"Room No. of Kitchen Area:102\n";
+            cout<<"Room No. of coffee Area:103\n";
             cout<<"\n\t\t\t---------------SECOND COMPARTMENT---------------\t\t\t\n";
-            cout<<"Room No. of Lab Area: 201\n";
-            cout<<"Room No. of Meeting Area: 202\n";
-            cout<<"Room No. of Workspace Area: 203\n";
+            cout<<"Room No. of Lab Area:201\n";
+            cout<<"Room No. of Meeting Area:202\n";
+            cout<<"Room No. of Workspace Area:203\n";
         }
 
 int main(){
@@ -125,7 +125,7 @@ int main(){
         
     int ch;
     do{
-        cout<<"\nEnter Your Choise: ";
+        cout<<"\nEnter Your Choise:";
         cin>>ch;
         
         switch(ch){
