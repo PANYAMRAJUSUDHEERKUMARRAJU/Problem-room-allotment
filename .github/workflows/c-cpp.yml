@@ -129,22 +129,22 @@ int main(){
         cin>>ch;
         
         switch(ch){
-            case 1:
+            case 1;
             Book();
             break;
-            case 2:
+            case 2;
             setHost();
             break;
-            case 3:
+            case 3;
             startTime();
             break;
-            case 4:
+            case 4;
             endTime();
             break;
-            case 5:
+            case 5;
             capability();
             break;
-            case 6:
+            case 6;
             roomNo();
             break;
         }
